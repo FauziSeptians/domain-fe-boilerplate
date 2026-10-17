@@ -1,5 +1,4 @@
-export type User = {
-    name: string;
-    phoneNumber: string;
-    age: number;
-}
+import { userSchema } from '@/domains/auth/validators/user';
+import z from 'zod';
+
+export type User = z.infer<typeof userSchema>;
