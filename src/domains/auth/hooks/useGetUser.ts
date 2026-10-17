@@ -1,4 +1,3 @@
-import axios from '@/shared/lib/axios';
 import userManagement from '@/domains/auth/services/user-management';
 import { useQuery } from '@tanstack/react-query';
 
@@ -7,7 +6,7 @@ function getUserKey() {
 }
 
 function getUser() {
-  return userManagement.get().then((response: any) => response.data);
+  return userManagement.get().then((response) => response.data);
 }
 
 export default function useGetUser() {
